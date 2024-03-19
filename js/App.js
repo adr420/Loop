@@ -1,11 +1,10 @@
 import { Sound } from "./Sound.js";
+import { Point, Circle, Arc, Line, Style } from "./Draw.js";
 
 /**
  * ==== TODO =====
  * 
- * -> Setup canvas
  * -> Make Shapes.js
- * -> Make Draw.js
  * 
  */
 const body = document.body;
@@ -56,18 +55,12 @@ const App = {
         
     },
     test: function(){
-        const canvas = (createHiDPICanvas(window.innerWidth,window.innerHeight));
-        canvas.id = "gameScreen";
-        game_elem.appendChild(canvas);
         
-        const ctx = canvas.getContext("2d");
-        ctx.beginPath();
-        ctx.lineWidth = 5;
-        ctx.arc(100,100,50,0,2*Math.PI);
-        ctx.stroke();
-        ctx.closePath();
-
-    }
+    },
+	render: function()
+	{
+		
+	}
 }
 
 window.onload = App.init.bind(App);
